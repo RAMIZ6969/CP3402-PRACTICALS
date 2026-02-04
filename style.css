@@ -76,6 +76,19 @@ section { padding: 100px 5%; min-height: 80vh; }
     box-shadow: 0 4px 6px rgba(0,0,0,0.05);
 }
 
+/* Add this to your existing style.css */
+#concept p {
+    max-width: 800px;
+    margin: 0 auto 1.5rem auto;
+    font-size: 1.1rem;
+    color: #475569;
+    text-align: left;
+}
+
+strong {
+    color: var(--primary);
+}
+
 footer {
     background: var(--dark);
     color: white;
