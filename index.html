@@ -2,61 +2,112 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SkillSwap AI | Internal Knowledge Mapping</title>
-    <link rel="stylesheet" href="style.css">
+    <title>UniTasker - JCU Campus Marketplace</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; color: #444; background-color: #f4f7f6; }
+        .container { max-width: 1100px; margin: 0 auto; padding: 20px; background: #fff; box-shadow: 0 0 10px rgba(0,0,0,0.05); }
+        
+        /* Navigation */
+        nav { display: flex; justify-content: space-between; align-items: center; padding: 20px 0; border-bottom: 1px solid #eee; margin-bottom: 30px; }
+        .logo img { height: 40px; }
+        .nav-links a { text-decoration: none; color: #555; font-weight: 500; margin-left: 20px; }
+        .nav-links a.active { color: #0073e6; }
+
+        /* Home Section / Hero */
+        .home-hero { text-align: center; padding: 60px 20px; background: linear-gradient(rgba(0,115,230,0.05), rgba(255,255,255,0)); border-radius: 8px; margin-bottom: 40px; }
+        .home-hero h1 { font-size: 2.5rem; color: #333; margin-bottom: 15px; }
+        .home-hero p { font-size: 1.2rem; color: #666; max-width: 700px; margin: 0 auto 30px; }
+        .cta-button { background: #0073e6; color: white; padding: 15px 40px; text-decoration: none; border-radius: 4px; font-weight: bold; }
+
+        /* Content Headings */
+        h2 { font-size: 2rem; color: #333; margin-bottom: 20px; border-left: 5px solid #0073e6; padding-left: 15px; }
+        .content-para { line-height: 1.6; font-size: 1.1rem; color: #666; margin-bottom: 30px; }
+
+        /* Form Styling */
+        .form-container { border: 1px solid #ddd; padding: 30px; border-radius: 8px; background: #fafafa; max-width: 700px; margin: 0 auto 50px; }
+        .form-group { margin-bottom: 15px; }
+        .form-group label { display: block; margin-bottom: 5px; font-weight: bold; }
+        .form-group input { width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box; }
+        .form-group small { color: #888; font-size: 0.85rem; }
+        .submit-btn { background: #0073e6; color: white; padding: 12px 25px; border: none; border-radius: 4px; cursor: pointer; width: 100%; font-size: 1rem; }
+
+        /* Team Section */
+        .team-section { display: flex; gap: 40px; margin-top: 50px; border-top: 2px solid #eee; padding-top: 40px; }
+        .profile-side { flex: 1; text-align: center; }
+        .profile-side img { width: 100%; border-radius: 4px; max-width: 350px; }
+        .bio-side { flex: 1.5; }
+        .social-icons { margin-top: 15px; font-size: 1.5rem; display: flex; gap: 15px; justify-content: center; }
+        .social-icons a { text-decoration: none; color: #0073e6; }
+
+        /* Footer */
+        footer { text-align: center; padding: 40px 0; border-top: 1px solid #eee; margin-top: 50px; font-size: 0.9rem; color: #777; }
+    </style>
 </head>
 <body>
 
+<div class="container">
     <nav>
-        <div class="logo">SkillSwap<span>AI</span></div>
-        <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#concept">Concept</a></li>
-            <li><a href="#how-it-works">How It Works</a></li>
-        </ul>
+        <div class="logo"><img src="Logo.png" alt="UniTasker Logo"></div>
+        <div class="nav-links">
+            <a href="#home" class="active">Home</a>
+            <a href="#how-it-works">How it Works</a>
+            <a href="#team">Team</a>
+        </div>
     </nav>
 
-    <section id="home" class="hero">
-        <div class="content">
-            <h1>Unlocking the Hidden Talent in Your Workspace</h1>
-            <p>Mapping internal expertise and pairing mentors with learners using intelligent AI matching.</p>
-            <a href="#concept" class="btn">Discover the Vision</a>
-        </div>
-    </section>
-
-    <section id="concept">
-        <div class="container">
-            <h2>The Problem: Knowledge Silos</h2>
-            <p>In large organizations, experts in specialized fields like are often unknown to their colleagues. This leads to expensive external training and wasted time.</p>
-            <p><strong>SkillSwap AI</strong> was founded as part of the CP3402 course to bridge this gap. Our mission is to break down these barriers by providing an AI-driven directory that facilitates 1-on-1 knowledge transfers between coworkers.</p>
-            <img src="team_meeting.jpg" alt="Collaborative team environment">
-        </div>
+    <section id="home" class="home-hero">
+        <h1>Welcome to UniTasker</h1>
+        <p>Turn your brief timetable gaps into earning opportunities. UniTasker connects the JCU community for micro-jobs that take 30 minutes or less.</p>
+        <a href="#how-it-works" class="cta-button">Post a Task Now</a>
     </section>
 
     <section id="how-it-works">
-        <div class="container">
-            <h2>Our Core Features</h2>
-            <div class="grid">
-                <div class="card">
-                    <h3>Intelligent Skill Mapping</h3>
-                    <p>Our AI scans internal profiles to identify core strengths and technical skills across your entire workforce.</p>
+        <h2>Define Your Need</h2>
+        <p class="content-para">
+            Whether you're a student overwhelmed with move-in day or a faculty member needing help with event setup, UniTasker is designed for efficiency. Our goal is to allow any user to define a need and post a task in under 60 seconds.
+        </p>
+
+        <div class="form-container">
+            <form onsubmit="alert('Task Submitted Successfully!'); return false;">
+                <div class="form-group">
+                    <label>Task Title *</label>
+                    <input type="text" placeholder="eg, carry furnitures" required>
+                    <small>eg, carry furnitures</small>
                 </div>
-                <div class="card">
-                    <h3>Automated Mentorship</h3>
-                    <p>The algorithm automatically suggests the best person in the building to help you with your specific project hurdles.</p>
+                <div class="form-group">
+                    <label>Task Location *</label>
+                    <input type="text" placeholder="eg, JCU Library" required>
+                    <small>eg, JCU Library</small>
                 </div>
-                <div class="card">
-                    <h3>Progress Tracking</h3>
-                    <p>HR teams gain insights into internal skill growth through comprehensive session logs and impact data.</p>
+                <div class="form-group">
+                    <label>Reward $ *</label>
+                    <input type="text" placeholder="eg, $15" required>
+                    <small>eg, $15</small>
                 </div>
+                <button type="submit" class="submit-btn">Submit</button>
+            </form>
+        </div>
+    </section>
+
+    <section id="team" class="team-section">
+        <div class="profile-side">
+            <img src="ramizkarim.jpg" alt="Mohammad Ramiz Karim">
+            <div class="social-icons">
+                <a href="https://www.facebook.com/ramiz.karim.2003">🌐</a> <a href="https://www.linkedin.com/in/mohammad-ramiz-karim-956b53292/">💼</a> <a href="mailto:mohammadramiz.karim@my.jcu.edu.au">✉️</a> <a href="https://github.com/RAMIZ6969">🐙</a>
             </div>
+        </div>
+        <div class="bio-side">
+            <h3 style="margin-top:0;">Founder & Lead Developer – Mohammad Ramiz Karim</h3>
+            <p>I am currently a 3rd-year student in my 1st trimester of a Bachelor of Information Technology at James Cook University. My professional aspiration is to become a Data Scientist, focusing on user-centric software solutions.</p>
+            <p>UniTasker represents my commitment to solving real-world campus problems through accessible technology.</p>
         </div>
     </section>
 
     <footer>
-        <p>&copy; 2026 SkillSwap AI - CP3402 Practical 1 Submission</p>
+        <p>Copyright © 2026 UniTasker | All rights reserved</p>
+        <p>Email: <a href="mailto:mohammadramiz.karim@my.jcu.edu.au" style="color:#0073e6; text-decoration:none;">mohammadramiz.karim@my.jcu.edu.au</a> | Mobile: +61 426 739 050</p>
     </footer>
+</div>
 
 </body>
 </html>
